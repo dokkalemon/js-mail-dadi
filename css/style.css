@@ -50,3 +50,53 @@
     margin-top: 20px;
     text-align: center;
 }
+
+/* Dadi */
+
+.dadi-container {
+    display: flex; 
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.dadi {
+    border: 1px solid red;
+    height: 500px;
+    width: 1200px;
+    margin: 200px auto 0 auto;
+    display: flex;
+}
+
+.box {
+    border: 1px solid red;
+    width: calc(100% / 2);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.box h1 {
+    font-size: 200px;
+}
+
+.btn-dadi {
+    width: 200px;
+    margin-top: 30px;
+    background-color: rebeccapurple;
+    border: 0;
+    padding: 10px 20px;
+    border-radius: 5px;
+}
+
+.btn-dadi:active {
+    background-color: red;
+}
+
+.winner {
+    background-color: green
+}
+
+.looser {
+    background-color: red;
+}

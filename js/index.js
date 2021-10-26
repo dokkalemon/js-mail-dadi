@@ -7,7 +7,7 @@
 
 //crea una lista contenente almeno 3 indirizzi email
 const mailList = ['dottori.roberto@gmail.com', 'mariorossi@yahoo.it', 'mariabianco@libero.it', 'francescorossi@live.it', 'giovannirossi@msn.com', 'filomenarosa@hotmail.it'];
-console.log(mailList)
+console.log(mailList);
 
 //chiedi all’utente la sua email
 //prendiamo i dati dall'utente
@@ -33,19 +33,8 @@ button.addEventListener('click', function() {
             result = false;
             title.innerHTML = 'Indirizzo Email Non Valido'
         };
-
     }
-   
 }) 
-
-
-
-
-
-
-
-
-
 
 
 /* Gioco dei dadi
@@ -54,3 +43,46 @@ Stabilire il vincitore, in base a chi fa il punteggio più alto.
 Ricordate che la documentazione 
 è li per aiutarci: https://www.w3schools.com/js/js_random.asp 
 */
+
+//Generare un numero random da 1 a 6, sia per il giocatore sia per il computer.
+const randomPlayer = Math.floor(Math.random() * 6) + 1;
+const randomComp = Math.floor(Math.random() * 6) + 1;
+
+//richiamare elementi del DOM
+
+//Players
+const Player = document.querySelector('.player');
+const Comp = document.querySelector('.comp');
+
+//text
+const numPlayer = document.querySelector('.number-player');
+const numComp = document.querySelector('.number-comp');
+
+//button
+const btnDadi = document.querySelector('.btn-dadi');
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* 
+console.log(randomPlayer);
+console.log(randomComp);
+
+ */
+
+
+
+
+
+
+
+//Stabilire il vincitore, in base a chi fa il punteggio più alto.

@@ -7,7 +7,6 @@
 
 //crea una lista contenente almeno 3 indirizzi email
 const mailList = ['dottori.roberto@gmail.com', 'mariorossi@yahoo.it', 'mariabianco@libero.it', 'francescorossi@live.it', 'giovannirossi@msn.com', 'filomenarosa@hotmail.it'];
-console.log(mailList);
 
 //chiedi all’utente la sua email
 //prendiamo i dati dall'utente
@@ -94,19 +93,6 @@ btnDadi.addEventListener('click', function() {
     }
 })
 
-
-
-
-
-
-
-
-
-
-
-
-console.log(randomPlayer);
-console.log(randomComp);
 
 
 

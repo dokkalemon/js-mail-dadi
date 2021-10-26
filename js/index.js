@@ -6,16 +6,37 @@
  */
 
 //crea una lista contenente almeno 3 indirizzi email
-const mailList = ['dottori.roberto@gmail.com', 'mariorossi@yahoo.it', 'mariabianco@libero.it', 'francescorossi@live.it'];
-console.log(mailList);
+const mailList = ['dottori.roberto@gmail.com', 'mariorossi@yahoo.it', 'mariabianco@libero.it', 'francescorossi@live.it', 'giovannirossi@msn.com', 'filomenarosa@hotmail.it'];
+console.log(mailList)
 
 //chiedi all’utente la sua email
 //prendiamo i dati dall'utente
-const userMail = document.getElementById('email').value;
-console.log(userMail);
+const userMail = document.getElementById('email');
 
 //scateniamo l'evento al click
+const button = document.querySelector('.btn-email');
+let result = '';
 
+button.addEventListener('click', function() {
+    
+    for (let i = 0; i < mailList.length; i++) {
+
+        result = false;
+
+        const title = document.querySelector('.titolo');
+         
+        if (userMail.value.trim().toLowerCase() == mailList[i]) {
+            result = true;
+            title.innerHTML = 'Indirizzo Email Valido'
+            break;
+        } else {
+            result = false;
+            title.innerHTML = 'Indirizzo Email Non Valido'
+        };
+
+    }
+   
+}) 
 
 
 

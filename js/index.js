@@ -37,6 +37,18 @@ button.addEventListener('click', function() {
 }) 
 
 
+
+
+
+
+
+
+
+
+//////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////
 /* Gioco dei dadi
 Generare un numero random da 1 a 6, sia per il giocatore sia per il computer.
 Stabilire il vincitore, in base a chi fa il punteggio più alto.
@@ -51,8 +63,8 @@ const randomComp = Math.floor(Math.random() * 6) + 1;
 //richiamare elementi del DOM
 
 //Players
-const Player = document.querySelector('.player');
-const Comp = document.querySelector('.comp');
+const player = document.querySelector('.player');
+const comp = document.querySelector('.comp');
 
 //text
 const numPlayer = document.querySelector('.number-player');
@@ -61,6 +73,26 @@ const numComp = document.querySelector('.number-comp');
 //button
 const btnDadi = document.querySelector('.btn-dadi');
 
+btnDadi.addEventListener('click', function() {
+
+    if(randomPlayer > randomComp) {
+        numPlayer.innerHTML = randomPlayer;
+        numComp.innerHTML = randomComp;
+        player.classList.add('winner')
+        comp.classList.add('looser')
+
+    } else if (randomComp > randomPlayer) {
+        numPlayer.innerHTML = randomPlayer;
+        numComp.innerHTML = randomComp;
+        player.classList.add('looser')
+        comp.classList.add('winner')
+    } else {
+        numPlayer.innerHTML = randomPlayer;
+        numComp.innerHTML = randomComp;
+        player.classList.add('pari')
+        comp.classList.add('pari')
+    }
+})
 
 
 
@@ -73,11 +105,10 @@ const btnDadi = document.querySelector('.btn-dadi');
 
 
 
-/* 
 console.log(randomPlayer);
 console.log(randomComp);
 
- */
+
 
 
 

@@ -87,6 +87,8 @@
     border: 0;
     padding: 10px 20px;
     border-radius: 5px;
+    color: white;
+    font-weight: 600;
 }
 
 .btn-dadi:active {
@@ -94,9 +96,13 @@
 }
 
 .winner {
-    background-color: green
+    background-color: rgba(3, 150, 3, 0.5)
 }
 
 .looser {
-    background-color: red;
+    background-color: rgba(255, 1, 1, 0.5);
+}
+
+.pari {
+    background-color: rgba(255, 166, 0, 0.5);
 }

@@ -5,6 +5,25 @@
 - stampa un messaggio appropriato sull’esito del controllo.
  */
 
+//crea una lista contenente almeno 3 indirizzi email
+const mailList = ['dottori.roberto@gmail.com', 'mariorossi@yahoo.it', 'mariabianco@libero.it', 'francescorossi@live.it'];
+console.log(mailList);
+
+//chiedi all’utente la sua email
+//prendiamo i dati dall'utente
+const userMail = document.getElementById('email').value;
+console.log(userMail);
+
+//scateniamo l'evento al click
+
+
+
+
+
+
+
+
+
 
 
 

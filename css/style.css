@@ -97,8 +97,9 @@
     padding: 10px 20px;
     border-radius: 5px;
     color: white;
-    font-weight: 600;
+    font-weight: 500;
     margin-bottom: 100px;
+    font-size: 20px;
 }
 
 .btn-dadi:active {

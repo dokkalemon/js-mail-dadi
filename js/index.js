@@ -50,12 +50,8 @@ Ricordate che la documentazione
 è li per aiutarci: https://www.w3schools.com/js/js_random.asp 
 */
 
-//Generare un numero random da 1 a 6, sia per il giocatore sia per il computer.
-const randomPlayer = Math.floor(Math.random() * 6) + 1;
-const randomComp = Math.floor(Math.random() * 6) + 1;
 
 //richiamare elementi del DOM
-
 //Players
 const player = document.querySelector('.player');
 const comp = document.querySelector('.comp');
@@ -68,22 +64,35 @@ const numComp = document.querySelector('.number-comp');
 const btnDadi = document.querySelector('.btn-dadi');
 
 btnDadi.addEventListener('click', function() {
+    //Generare un numero random da 1 a 6, sia per il giocatore sia per il computer.
+    const randomPlayer = Math.floor(Math.random() * 6) + 1;
+    const randomComp = Math.floor(Math.random() * 6) + 1;
+    const finalText = document.querySelector('.final-text');
+
 
     if(randomPlayer > randomComp) {
         numPlayer.innerHTML = randomPlayer;
         numComp.innerHTML = randomComp;
-        player.classList.add('winner')
-        comp.classList.add('looser')
-
-    } else if (randomComp > randomPlayer) {
+        player.classList.add('winner');
+        comp.classList.add('looser');
+        player.classList.remove('looser', 'pari');
+        comp.classList.remove('winner', 'pari');
+        finalText.innerHTML = 'Vince il Giocatore'
+    } else if (randomPlayer < randomComp) {
         numPlayer.innerHTML = randomPlayer;
         numComp.innerHTML = randomComp;
-        player.classList.add('looser')
-        comp.classList.add('winner')
+        player.classList.add('looser');
+        comp.classList.add('winner');
+        player.classList.remove('winner', 'pari');
+        comp.classList.remove('looser', 'pari');
+        finalText.innerHTML = 'Vince il Computer'
     } else {
         numPlayer.innerHTML = randomPlayer;
         numComp.innerHTML = randomComp;
-        player.classList.add('pari')
-        comp.classList.add('pari')
+        player.classList.add('pari');
+        comp.classList.add('pari');
+        player.classList.remove('winner', 'looser');
+        comp.classList.remove('looser', 'winner');
+        finalText.innerHTML = 'Parità'
     }
 })
